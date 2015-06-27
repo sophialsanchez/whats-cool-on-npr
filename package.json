@@ -1,0 +1,31 @@
+{
+  "name": "whats-cool-on-npr",
+  "version": "1.0.0",
+  "description": "NPR neoHack project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "^2.3.1",
+    "express": "^4.9.8"
+  },
+  "engines": {
+    "node": "0.12.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sophialsanchez/whats-cool-on-npr.git"
+  },
+  "keywords": [
+    "npr",
+    "hackathon",
+    "neohack"
+  ],
+  "author": "Team NeoHack Platypus Renegades (NPR)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sophialsanchez/whats-cool-on-npr/issues"
+  },
+  "homepage": "https://github.com/sophialsanchez/whats-cool-on-npr#readme"
+}
