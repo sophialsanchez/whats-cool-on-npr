@@ -122,7 +122,7 @@ function pick_subCategory(media, category, subCategory){
 		return null;
 	}
 	else {
-	
+		switch(category)
 	}
 	return subCategory;
 
