@@ -123,13 +123,13 @@ function pick_subCategory(media, category, subCategory){
 	}
 	else {
 		if (subCategory == "awesomesauce") {
-			return "zero";
+			return "0";
 		}
 		else if (subCategory == "spicy") {
-			return "one";
+			return "1";
 		}
 		else {
-			return "two";
+			return "2";
 		}
 	}
 }
