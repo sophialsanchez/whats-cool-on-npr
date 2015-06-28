@@ -1,16 +1,16 @@
-var apiResult = require('./API.js');
-var Firebase = require("firebase");
-var maps = require('./IdMaps.js');
+// var apiResult = require('./API.js');
+// var Firebase = require("firebase");
+// var maps = require('./IdMaps.js');
 
 module.exports = {
 
-saveData: function(data, category) {
+
+saveData: function(data, category, fbRef) {
 
 	// http://www.npr.org/player/embed/[STORY_ID]/[AUDIO_ID]
 	// STORY_ID = data.list.story[STORY_INDEX].id
 	// AUDIO_ID = data.list.story[STORY_INDEX].audio[AUDIO_INDEX].id
 
-    var fbRef = new Firebase('https://npr-platypus.firebaseio.com/');
 
 	var stringBeginning = 'http://www.npr.org/player/embed/'
 
@@ -45,16 +45,19 @@ saveData: function(data, category) {
 		return story !== undefined;
 	});
 
+	console.log(category)
+	console.log(stories)
 
-// 	fbRef.authAnonymously(function(error, embedString) {
-// 		if (error) {
-// 			console.log("Login Failed!", error);
-// 		} else {
-// 			console.log('hey', category);
-// 		    fbRef.child(category).set(stories);
-// 		    console.log("Authenticated successfully with payload:", embedString);
-// 		}
-// 		
-// 	})
+
+	// fbRef.authAnonymously(function(error, embedString) {
+	// 	if (error) {
+	// 		console.log("Login Failed!", error);
+	// 	} else {
+		    fbRef.child(category).set(stories);
+
+		//     console.log("Authenticated successfully with payload:", embedString);
+		// }
+		
+	// })
 }
 }

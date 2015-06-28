@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var firebase = require('./app/firebase.js')
+// var firebase = require('./app/firebase.js')
 var API = require('./app/API.js')
 var maps = require('./app/IdMaps.js')
 

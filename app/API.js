@@ -4,6 +4,11 @@ var password = 'nprplatypus';
 var apiKey = 'MDE5NzA1OTg2MDE0MzU0NTMzOTU3NDUwZg001';
 var maps = require('./IdMaps.js');
 
+
+var Firebase = require("firebase");
+var fbRef = new Firebase('https://npr-platypus.firebaseio.com/');
+
+
 var firebase = require('./FirebaseTest.js')
 
 Object.keys(maps).forEach(function(map) {
@@ -41,7 +46,7 @@ Object.keys(maps).forEach(function(map) {
 
         reqData = JSON.parse(reqData)
         // console.log(reqData)
-        firebase.saveData(reqData, category);
+        firebase.saveData(reqData, category, fbRef);
 
 
       });
