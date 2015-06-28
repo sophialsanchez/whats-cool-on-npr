@@ -17,8 +17,9 @@ myFirebaseRef.child(media).child(category).child(subCategory).once("value", func
   	});
 });
 
-	
-
+	$('#submit').on('click', function() {
+		$('.row').css('display', 'block');
+	});
 
 
 

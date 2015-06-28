@@ -29,10 +29,11 @@
 
   <body>
 
+
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">What's cool on NPR?</a>
+          <a class="navbar-brand" href="#">What's cool on <span><img src="http://static1.squarespace.com/static/510af861e4b0fb4ac2476309/53da35bae4b01b437215f1b7/54de1883e4b0cc5a01ed261c/1424400319850" style="width: 50px; margin-top:-13px"/></span>?</a>
         </div>
       </div>
     </nav>
@@ -40,34 +41,49 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
+
       <div>
-        <h3>Select Media</h3>
+      
+        <h3>What do you like?</h3>
         <div class="btn-group" role="group" aria-label="...">
-           <button type="button" class="btn btn-default">Audio</button>
-            <button type="button" class="btn btn-default">Text</button>
-           <button type="button" class="btn btn-default">Both</button>
+           <button type="button" id="news" name="news" class="btn btn-default">News</button>
+            <button type="button" id="music" name="music" class="btn btn-default">Music</button>
+           <button type="button" id="down" name="down" class="btn btn-default">Down for whatever!</button>
         </div>
         </div>
-        <!-- Trending or Unique -->
-<div>
-    <h3>Pick the coolest picture?</h3>
+        
+    <div>
+        <h3>How would you describe yourself?</h3>
+        <div class="btn-group" role="group" aria-label="...">
+           <button type="button" id="awesomesauce" name="awesomesauce" class="btn btn-default">Awesomesauce</button>
+            <button type="button" id="spicy" name="spicy" class="btn btn-default">Spicy</button>
+           <button type="button" id="gregarious" name="gregarious" class="btn btn-default">Gregarious</button>
+        </div>
+        </div>
+	<div>
+	
+    <h3>Which one's coolest?</h3>
     <div class="btn-group" role="group" aria-label="...">
-      <button type="button" class="btn btn-default" class="btn-photo"><img src="http://media.npr.org/assets/img/2015/06/26/ap_961200898480_wide-e8dee051d2bcdfb52ee65a83262c277e40afa538-s600-c85.jpg" width="125px" height="100px"></button>
-      <button type="button" class="btn btn-default" class="btn-photo"><img src="http://media.npr.org/assets/img/2015/06/25/ap_714916175632_wide-f7a86a4e4e5d2cf9eeaa05ba15af5f9d0be4e6c6-s500-c85.jpg" width="125px" height="100px"></button>
-      <button type="button" class="btn btn-default" class="btn-photo"><img src="http://media.npr.org/assets/img/2015/06/23/ap101118115464_wide-324b01c9414be5d1c4ce446ac05e1b5e854d1c36-s700-c85.jpg" width="125px" height="100px"></button>
-      <button type="button" class="btn btn-default" class="btn-photo"><img src="http://media.npr.org/assets/img/2015/06/23/merseult-investigation-by-kamel-daoud-on-bookdragon-via-csmonitor-800x1200_wide-5be8675a4b627880ecf88e335ffd4d71b872e5ae-s700-c85.jpg" width="125px" height="100px"></button>
-      <button type="button" class="btn btn-default" class="btn-photo"><img src="http://media.npr.org/assets/img/2015/06/17/ballers03_wide-a999f1a090782b91dabda76a64da7ba8b724d1c5-s700-c85.jpg" width="125px" height="100px"></button>
-      <button type="button" class="btn btn-default" class="btn-photo"><img src="http://media.npr.org/assets/img/2015/06/12/sadness-fear--anger--disgust--joy-2015-disneypixar_wide-64277b4e098a4a8f258be33ead42fcf1b0c75831-s700-c85.jpg" width="125px" height="100px"></button>    
+      <button type="button" id="sports" name="sports" class="btn btn-default" class="btn-photo"><img src="http://media.npr.org/assets/img/2015/06/26/ap_961200898480_wide-e8dee051d2bcdfb52ee65a83262c277e40afa538-s600-c85.jpg" width="125px" height="100px"></button>
+      <button type="button" id="health" name="health" class="btn btn-default" class="btn-photo"><img src="http://media.npr.org/assets/img/2015/06/25/ap_714916175632_wide-f7a86a4e4e5d2cf9eeaa05ba15af5f9d0be4e6c6-s500-c85.jpg" width="125px" height="100px"></button>
+      <button type="button" id="art" name="art" class="btn btn-default" class="btn-photo"><img src="http://media.npr.org/assets/img/2015/06/23/ap101118115464_wide-324b01c9414be5d1c4ce446ac05e1b5e854d1c36-s700-c85.jpg" width="125px" height="100px"></button>
+      <button type="button" id="travel" name="travel"class="btn btn-default" class="btn-photo"><img src="http://media.npr.org/assets/img/2015/06/23/merseult-investigation-by-kamel-daoud-on-bookdragon-via-csmonitor-800x1200_wide-5be8675a4b627880ecf88e335ffd4d71b872e5ae-s700-c85.jpg" width="125px" height="100px"></button>
+      <button type="button" id="business" name="business" class="btn btn-default" class="btn-photo"><img src="http://media.npr.org/assets/img/2015/06/17/ballers03_wide-a999f1a090782b91dabda76a64da7ba8b724d1c5-s700-c85.jpg" width="125px" height="100px"></button>
+      <button type="button" id="entertainment" name="entertainment" class="btn btn-default" class="btn-photo"><img src="http://media.npr.org/assets/img/2015/06/12/sadness-fear--anger--disgust--joy-2015-disneypixar_wide-64277b4e098a4a8f258be33ead42fcf1b0c75831-s700-c85.jpg" width="125px" height="100px"></button>    
     </div>
     </div>
 
       </div>
+        <div id="submitButton">
+        <button type="button" class="btn btn-default btn-lg" id="submit">
+  		<span class="glyphicon glyphicon-star"></span> Submit
+		</button></div>
     </div>
-
+    
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
-     	<h2>What about these?</h2>
+     	<h2>Here's a gem of a story!</h2>
 		<div class="stories">
 		</div>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
@@ -77,7 +93,7 @@
       <hr>
 
       <footer>
-        <p>&copy; Company 2014</p>
+        <p>&copy; NeoHack Platypus Renegades 2015</p>
       </footer>
     </div> <!-- /container -->
 

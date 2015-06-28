@@ -7,7 +7,7 @@ h1, p {
 }
 
 .navbar-inverse {
-  background-color: #d20;
+  background-color: #6F646A;
   border-color: #fff;
   border-bottom-width: 5px;
 }
@@ -32,4 +32,5 @@ h1, p {
 
 .row {
 	text-align: center;
+	display: none;
 }
