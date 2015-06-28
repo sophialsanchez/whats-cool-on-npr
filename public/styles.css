@@ -38,3 +38,14 @@ h1, p {
 .button-selected {
 	background-color: hsl(0, 0%, 90%);
 }
+
+#submitButton {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.stories iframe {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 800px;
+}
