@@ -9,9 +9,7 @@ var pic = "politics";
 
 
 myFirebaseRef.child("article1").on("value", function(snapshot) {
-  var url = snapshot.val(); 
-  console.log(url);
-  appendContent(url);
+  appendContent(snapshot.val());
 });
 
 
