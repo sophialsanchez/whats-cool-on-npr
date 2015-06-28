@@ -1,0 +1,35 @@
+body {
+	  font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+h1, p {
+	text-align: center;
+}
+
+.navbar-inverse {
+  background-color: #d20;
+  border-color: #fff;
+  border-bottom-width: 5px;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #fff;
+ }
+
+ .navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 11px 15px;
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 45px;
+}
+
+.jumbotron {
+  color: #ccc;
+  background-color: #36d;
+}
+
+.row {
+	text-align: center;
+}
