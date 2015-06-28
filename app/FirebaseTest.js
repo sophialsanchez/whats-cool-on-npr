@@ -1,9 +1,10 @@
-var apiResult = require('./API.js')
+var apiResult = require('./API.js');
 var Firebase = require("firebase");
+var maps = require('./IdMaps.js');
 
 module.exports = {
 
-saveData: function(data) {
+saveData: function(data, category) {
 
 	// http://www.npr.org/player/embed/[STORY_ID]/[AUDIO_ID]
 	// STORY_ID = data.list.story[STORY_INDEX].id
@@ -20,7 +21,7 @@ saveData: function(data) {
 			var audioStr = story.audio[0].id;
 			result.embedLink = (stringBeginning + storyStr + '/' + audioStr);
 		}
-
+		result.title = story.title.$text
 		result.topic = data.list.title.$text;
 		// for (i = 3; i < data.list.story.length; ++i ) {
 			
@@ -35,8 +36,13 @@ saveData: function(data) {
 		// // if (story.show.program.$text) {
 		// // 	result.showName = story.show.program.$text }
 		// story.keywords = story.keywords;
-		console.log(result);
-		return result;
+		//console.log(result);
+		if (result.embedLink) {
+			// console.log(result)
+			return result
+		}
+	}).filter( function(story) {
+		return story !== undefined;
 	});
 
 
@@ -44,7 +50,8 @@ saveData: function(data) {
 		if (error) {
 			console.log("Login Failed!", error);
 		} else {
-		    fbRef.child('politics').set(stories);
+			console.log('hey', category);
+		    fbRef.child(category).set(stories);
 		    console.log("Authenticated successfully with payload:", embedString);
 		}
 		
