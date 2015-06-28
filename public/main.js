@@ -101,7 +101,7 @@ function pick_category(media, category){
 				category = "pop";
 				break;
 			case "health":
-				category = "jazz";
+				category = "jazz";	
 				break;
 			case "politics":
 				category = "rock";
@@ -122,8 +122,14 @@ function pick_subCategory(media, category, subCategory){
 		return null;
 	}
 	else {
-		switch(category)
+		if (subCategory == "awesomesauce") {
+			return "zero";
+		}
+		else if (subCategory == "spicy") {
+			return "one";
+		}
+		else {
+			return "two";
+		}
 	}
-	return subCategory;
-
 }
