@@ -34,3 +34,7 @@ h1, p {
 	text-align: center;
 	display: none;
 }
+
+.button-selected {
+	background-color: hsl(0, 0%, 90%);
+}
