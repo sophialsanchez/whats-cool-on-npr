@@ -46,15 +46,15 @@ saveData: function(data, category) {
 	});
 
 
-	fbRef.authAnonymously(function(error, embedString) {
-		if (error) {
-			console.log("Login Failed!", error);
-		} else {
-			console.log('hey', category);
-		    fbRef.child(category).set(stories);
-		    console.log("Authenticated successfully with payload:", embedString);
-		}
-		
-	})
+// 	fbRef.authAnonymously(function(error, embedString) {
+// 		if (error) {
+// 			console.log("Login Failed!", error);
+// 		} else {
+// 			console.log('hey', category);
+// 		    fbRef.child(category).set(stories);
+// 		    console.log("Authenticated successfully with payload:", embedString);
+// 		}
+// 		
+// 	})
 }
 }

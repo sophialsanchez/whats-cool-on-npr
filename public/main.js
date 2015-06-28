@@ -1,10 +1,6 @@
 var myFirebaseRef = new Firebase("https://npr-platypus.firebaseio.com/");
 
 var selection = {};
-// var media = "news";
-// var category = "art";
-// var subCategory = "architecture";
-
 
 
 $('[data-group]').each(function() {
@@ -23,17 +19,23 @@ $('[data-group]').each(function() {
 });
 
 function getData(selection) {
+	
 	var media = selection.media;
 	var category = selection.category;
 	var subCategory = selection.subCategory;
+	console.log(media, category, subCategory);
 	
-	myFirebaseRef.child(media).child(category).child(subCategory).once("value", function(snapshot) {
+	var ref = myFirebaseRef.child(media).child(category);
+	if (subCategory) {
+		ref = ref.child(subCategory);
+	}
+	
+	ref.once("value", function(snapshot) {
 		var numChildren = snapshot.numChildren();
 		var randInt = Math.floor((Math.random() * numChildren));
 		var i = 0;
-		myFirebaseRef.child(media).child(category).child(subCategory).on("child_added", function(snapshot) {
+		ref.on("child_added", function(snapshot) {
 			if(i == randInt) {
-				console.log(snapshot.val());
 				appendContent(snapshot.val().embedLink);
 			}
 			i++;
@@ -43,7 +45,6 @@ function getData(selection) {
 }
 
 	$('#submit').on('click', function() {
-		console.log(selection);
 		var media = selection.media;
 		var category = selection.category;
 		var subCategory = selection.subCategory;
@@ -62,9 +63,67 @@ function getData(selection) {
 			alert('Pick the coolest picture!');
 			return;
 		}
+
 		
-		getData(selection);
+		getData({
+			media: pick_media(media),
+			category: pick_category(media, category),
+			subCategory: pick_subCategory(media, category, subCategory)
+		});
 	});
 
+function pick_media(media) {
+	if (media == "down"){
+		var randInt = Math.floor((Math.random() * 2));
+		console.log(randInt);
+		if (randInt == 0){
+			return "news";
+		}
+		else{
+			return "music";
+		}
+	}
+	else{
+		return media;
+	}
+}
 
+function pick_category(media, category){
+	if (media == "music"){
+		switch(category){
+			case "art":
+				category = "jazz";
+				break;
+			case "business":
+				category = "latin";
+				break;
+			case "entertainment":
+				category = "pop";
+				break;
+			case "health":
+				category = "jazz";
+				break;
+			case "politics":
+				category = "rock";
+				break;
+			case "science":
+				category = "world";
+				break;
+		}
+	}
+	else {
+		return category;
+	}
+	return category;
+}
 
+function pick_subCategory(media, category, subCategory){
+	if (media == 'music') {
+		return null;
+	}
+	else {
+	
+	}
+	return subCategory;
+
+}
